@@ -2,13 +2,57 @@
 
 ## Table of Contents
 
-1. [Data Types](#data-types)
-2. [Functions](#functions)
-3. [Conditional statements](#conditional-statements)
-4. [Loops](#loops)
-5. [`this` keyword](#this-keyword)
-6. [Object oriented programming](#object-oriented-programming)
-7. [Asynchronous programming](#asynchronous-programming)
+- [Getting started with Javascript](#getting-started-with-javascript)
+  - [Table of Contents](#table-of-contents)
+  - [JavaScript Introduction](#javascript-introduction)
+  - [Data Types](#data-types)
+    - [Primitive data types](#primitive-data-types)
+    - [Template Strings](#template-strings)
+    - [Reference data types](#reference-data-types)
+    - [Arrays](#arrays)
+  - [Functions](#functions)
+    - [Method vs Function](#method-vs-function)
+    - [Function declaration vs Function expression](#function-declaration-vs-function-expression)
+    - [Arrow functions](#arrow-functions)
+    - [Anonymous functions](#anonymous-functions)
+    - [Immediately Invoked Function Expression (IIFE)](#immediately-invoked-function-expression-iife)
+  - [Conditional statements](#conditional-statements)
+    - [if...else](#ifelse)
+    - [switch](#switch)
+    - [ternary operator](#ternary-operator)
+    - [truthy and falsy values](#truthy-and-falsy-values)
+  - [Loops](#loops)
+    - [for loop](#for-loop)
+    - [for...in loop](#forin-loop)
+    - [for...of loop](#forof-loop)
+    - [while loop](#while-loop)
+    - [do...while loop](#dowhile-loop)
+  - [this keyword](#this-keyword)
+  - [Object Oriented Programming](#object-oriented-programming)
+    - [Getters and Setters](#getters-and-setters)
+    - [Constructor function](#constructor-function)
+    - [Prototype](#prototype)
+    - [Classes](#classes)
+  - [Asynchronous programming](#asynchronous-programming)
+    - [Promises](#promises)
+    - [Async/Await](#asyncawait)
+    - [Try...Catch](#trycatch)
+    - [Callbacks](#callbacks)
+    - [Strict mode](#strict-mode)
+
+## JavaScript Introduction
+
+JavaScript is a programming language that is used to make web pages interactive. It is a scripting language that is used to create and control dynamic website content, i.e. anything that moves, refreshes, or otherwise changes on your screen without requiring you to manually reload a web page.
+
+To use JavaScript, you need to have a JavaScript engine installed in your browser. All modern browsers have a JavaScript engine built-in. You can also use JavaScript on the server-side using Node.js.
+
+To install Node.js, go to [nodejs.org](https://nodejs.org/en/) and download the latest version for your operating system.
+
+Once installed, you can run JavaScript files using the `node` command.
+
+```bash
+node myscript.js
+```
 
 ## Data Types
 
@@ -90,9 +134,9 @@ fruits[2] = "grape";
 console.log(fruits[2]); // grape
 ```
 
-### Functions
+## Functions
 
-#### Method vs Function
+### Method vs Function
 
 A **method** is a function that is a property of an object.
 
@@ -116,7 +160,7 @@ function sum(a, b) {
 }
 ```
 
-#### Function declaration vs Function expression
+### Function declaration vs Function expression
 
 ```javascript
 // Function declaration
@@ -130,7 +174,7 @@ let sum = function (a, b) {
 };
 ```
 
-#### Arrow functions
+### Arrow functions
 
 Arrow functions are a short syntax for writing function expressions.
 
@@ -146,7 +190,7 @@ If the function has only one statement, and the statement returns a value, you c
 let sum = (a, b) => a + b;
 ```
 
-#### Anonymous functions
+### Anonymous functions
 
 Anonymous functions are functions that are dynamically declared at runtime.
 
@@ -156,7 +200,7 @@ let sum = function (a, b) {
 };
 ```
 
-#### Immediately Invoked Function Expression (IIFE)
+### Immediately Invoked Function Expression (IIFE)
 
 An IIFE is a JavaScript function that runs as soon as it is defined.
 
@@ -166,9 +210,9 @@ An IIFE is a JavaScript function that runs as soon as it is defined.
 })();
 ```
 
-### Conditional statements
+## Conditional statements
 
-#### if...else
+### if...else
 
 ```javascript
 let age = 18;
@@ -182,7 +226,7 @@ if (age >= 18) {
 }
 ```
 
-#### switch
+### switch
 
 ```javascript
 let day = 3;
@@ -214,7 +258,7 @@ switch (day) {
 }
 ```
 
-#### ternary operator
+### ternary operator
 
 ```javascript
 let age = 18;
@@ -222,7 +266,7 @@ let age = 18;
 age >= 18 ? console.log("You can drive") : console.log("You can't drive");
 ```
 
-#### truthy and falsy values
+### truthy and falsy values
 
 In JavaScript values evaluate to true or false when evaluated in a boolean context.
 
@@ -235,9 +279,9 @@ Falsy values:
 
 All other values are truthy.
 
-### Loops
+## Loops
 
-#### for loop
+### for loop
 
 ```javascript
 for (let i = 0; i < 10; i++) {
@@ -245,7 +289,7 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-#### for...in loop
+### for...in loop
 
 ```javascript
 let car = {
@@ -260,7 +304,7 @@ for (let key in car) {
 }
 ```
 
-#### for...of loop
+### for...of loop
 
 ```javascript
 let fruits = ["apple", "banana", "orange"];
@@ -270,7 +314,7 @@ for (let fruit of fruits) {
 }
 ```
 
-#### while loop
+### while loop
 
 ```javascript
 let i = 0;
@@ -281,7 +325,7 @@ while (i < 10) {
 }
 ```
 
-#### do...while loop
+### do...while loop
 
 ```javascript
 let i = 0;
@@ -292,7 +336,7 @@ do {
 } while (i < 10);
 ```
 
-### this keyword
+## this keyword
 
 - In a method, `this` refers to the **owner object**.
 - Alone, `this` refers to the **global object**.
@@ -302,7 +346,7 @@ do {
 - Methods like **call()**, and **apply()** can refer `this` to **any object**.
 - In arrow functions, there is no `this` binding.
 
-### Object Oriented Programming
+## Object Oriented Programming
 
 Objects are used to model real-world objects that we want to represent inside our programs, and/or provide a simple way to access functionality that would otherwise be hard or impossible to make use of.
 
@@ -314,7 +358,7 @@ If a `car` is an object, then `x` and `car` are pointing to the same object, and
 const x = car; // will not create a copy of car
 ```
 
-#### Getters and Setters
+### Getters and Setters
 
 ```javascript
 let car = {
@@ -337,7 +381,7 @@ car.fullName = "Mercedes Benz C200";
 console.log(car.fullName); // Mercedes Benz
 ```
 
-#### Constructor function
+### Constructor function
 
 ```javascript
 function Car(name, model, year, isUsed) {
@@ -353,7 +397,7 @@ function Car(name, model, year, isUsed) {
 let car = new Car("BMW", "X5", 2019, true);
 ```
 
-#### Prototype
+### Prototype
 
 The JavaScript prototype property allows you to add new properties to object constructors:
 
@@ -370,7 +414,7 @@ Car.prototype.drive = function () {
 };
 ```
 
-#### Classes
+### Classes
 
 ```javascript
 class Car {
@@ -387,9 +431,9 @@ class Car {
 }
 ```
 
-### Asynchronous programming
+## Asynchronous programming
 
-#### Promises
+### Promises
 
 A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending.
 
@@ -410,7 +454,7 @@ If the job is finished successfully, `resolve(value)` is called with `value` bei
 
 If an error occurs, `reject(error)` is called with `error` being the error object.
 
-#### Async/Await
+### Async/Await
 
 The `async` keyword is added to functions to tell them to return a promise rather than directly returning the value.
 
@@ -458,7 +502,7 @@ async function displayCommits() {
 displayCommits();
 ```
 
-#### Try...Catch
+### Try...Catch
 
 The `try...catch` statement marks a block of statements to try and specifies a response should an exception be thrown.
 
@@ -508,7 +552,7 @@ async function displayCommits() {
 }
 ```
 
-#### Callbacks
+### Callbacks
 
 A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
 
@@ -545,7 +589,7 @@ getUser(1, (user) => {
 });
 ```
 
-#### Strict mode
+### Strict mode
 
 Strict mode is a way to introduce better error-checking into your code.
 
