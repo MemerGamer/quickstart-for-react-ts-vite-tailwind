@@ -29,5 +29,5 @@ This repository contains a collection of examples that provide hands-on learning
 
 1. [JavaScript](./JavaScript.md)
 2. [TypeScript](./TypeScript.md)
-3. [React](./React.md)
+3. [React with TypeScript](./React.md)
 4. [TailwindCSS](./TailwindCSS.md)
