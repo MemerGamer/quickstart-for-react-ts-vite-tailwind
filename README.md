@@ -31,12 +31,10 @@ This repository contains a collection of examples that provide hands-on learning
 1. Basic Usage of JavaScript
 2. Basic Usage of TypeScript
 3. Using React with TypeScript
-4. TailwindCSS with React
+4. Using TailwindCSS with React
+5. Basic Usage of ViteJS
 
 In the end you will be able to create a React application with TypeScript and TailwindCSS like this: [Example App](https://github.com/MemerGamer/vite-react-ts-tailwind-example)
-
-**Note**: In the example app we also use [ViteJS](https://vitejs.dev/) which is not covered in this quickstart guide.
-In summary ViteJS is frontend tool that is used for building fast and optimized web applications. It uses a modern build system and a fast development server to provide a streamlined and efficient development experience.
 
 ## Getting Started
 
@@ -44,3 +42,4 @@ In summary ViteJS is frontend tool that is used for building fast and optimized 
 - [Getting Started with TypeScript](./TypeScript.md)
 - [Getting Started with React and TypeScript](./React.md)
 - [Getting Started with TailwindCSS](./TailwindCSS.md)
+- [Getting Started with ViteJS](./ViteJS.md)
