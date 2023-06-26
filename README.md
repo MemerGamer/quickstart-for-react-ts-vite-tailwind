@@ -2,9 +2,9 @@
 
 <table align="center">
 <tr>
-<td><img src="./public/vite.svg" alt="Vite" width="100" height="100"></td>
 <td><img src="./public/react.svg" alt="React" width="100" height="100"></td>
 <td><img src="./public/typescript.svg" alt="TypeScript" width="100" height="100"></td>
+<td><img src="./public/vite.svg" alt="Vite" width="100" height="100"></td>
 <td><img src="./public/tailwind.svg" alt="TailwindCSS" width="100" height="100"></td>
 </tr>
 </table>
