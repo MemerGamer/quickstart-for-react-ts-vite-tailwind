@@ -23,17 +23,24 @@ React is a JavaScript library developed by Facebook for building user interfaces
 
 ## Setting Up a React Project with TypeScript
 
-To get started with React and TypeScript, you need to set up a new project. You can use tools like Create React App (CRA) or manually configure the project.
+To get started with React and TypeScript, you need to set up a new project. You can use tools like Vite, [Next.js, Remix, Gatsby](https://react.dev/learn/start-a-new-react-project) or manually configure the project.
 
-Here's an example of setting up a new React project with TypeScript using Create React App:
+Here's an example of setting up a new React project with TypeScript using Vite (more info in the [Official docs](https://vitejs.dev/guide/)):
 
 ```bash
-npx create-react-app my-app --template typescript
-cd my-app
-npm start
-```
+# npm 6.x
+npm create vite@latest my-app --template react-ts
 
+# npm 7+, extra double-dash is needed:
+npm create vite@latest my-app -- --template react-ts
+
+cd my-app
+npm install
+npm run dev
+```
 This command creates a new React project named `my-app` with TypeScript template and starts the development server.
+
+**Note:** You can also use Create React App (CRA), but it's slowly being [deprecated](https://hackernoon.com/create-react-app-is-dead-here-are-some-alternatives) due to a lack of recent updates.
 
 ## Components in React with TypeScript
 
