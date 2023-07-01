@@ -219,9 +219,7 @@ In the above example, the `address` property of `person` is optional. By using t
 
 ## Non-null Assertion Operator
 
-TypeScript provides the non-null assertion operator (`!`) to tell the compiler that a value will not be null or undefined at runtime, even if the type declaration allows it. It asserts that the value is non-null and non-undefined
-
-, allowing you to access properties or call methods without a compiler error.
+TypeScript provides the non-null assertion operator (`!`) to tell the compiler that a value will not be null or undefined at runtime, even if the type declaration allows it. It asserts that the value is non-null and non-undefined, allowing you to access properties or call methods without a compiler error.
 
 ```typescript
 const element = document.getElementById("myElement")!;
